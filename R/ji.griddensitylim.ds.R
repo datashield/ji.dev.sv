@@ -51,7 +51,7 @@ ji.griddensitylim.ds <- function(xvect,yvect, x.min, x.max, y.min, y.max, numint
   
   
   grid.density<-matrix(0,nrow=numints,ncol=numints)
-  cell.count = 0
+  cell.count<- 0
   
   for(j in 1:numints)
   {
@@ -60,8 +60,8 @@ ji.griddensitylim.ds <- function(xvect,yvect, x.min, x.max, y.min, y.max, numint
       grid.density[j,k]<-sum(1*(yvect>=y.cuts[j] & yvect<y.cuts[j+1] & xvect >=x.cuts[k] & xvect<x.cuts[k+1]), na.rm=TRUE)
       
       if (grid.density[j,k]<=4) {
-        grid.density[j,k] = 0
-        cell.count = cell.count+1
+        grid.density[j,k] <- 0
+        cell.count <- cell.count+1
       }
       
     }
