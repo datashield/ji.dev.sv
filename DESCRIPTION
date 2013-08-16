@@ -6,6 +6,7 @@ License: GPL-3
 Title: ji.dev.cl
 Description: ji.dev.sv
 AggregateMethods: ji.griddensitylim.ds, ji.MinMax.ds
+AssignMethods:
 Depends:
     fields,
     opal,
