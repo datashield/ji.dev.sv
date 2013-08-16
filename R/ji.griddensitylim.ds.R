@@ -1,5 +1,5 @@
-#' Generates a density grid with a priori defined limits
-#'
+#' 
+#' @title Generates a density grid with a priori defined limits
 #' @param xvect a numerical vector
 #' @param yvect a numerical vector
 #' @param x.min a minimum value for the x axis of the grid density object
@@ -7,10 +7,12 @@
 #' @param y.min a minimum value for the y axis of the grid density object
 #' @param y.max a maximum value for the y axis of the grid density object
 #' @param numints a number of intervals for the grid density object, by default is 20
+#' @return a grid density matrix
+#' @author Isaeva, J.
 #' @export
 #' 
-ji.griddensitylim.ds <- function(xvect,yvect, x.min, x.max, y.min, y.max, numints=20)
-{
+ji.griddensitylim.ds <- function(xvect,yvect, x.min, x.max, y.min, y.max, numints=20){
+  
   xvect.save<-xvect
   yvect.save<-yvect
   

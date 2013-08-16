@@ -3,10 +3,9 @@ Maintainer: <datashield@obiba.org>
 Author: <datashield@obiba.org>
 Version: 1.0
 License: GPL-3
-Title: ji.dev.cl
-Description: ji.dev.sv
+Title: ji.dev.sv
+Description: ji.dev.sv (sever)
 AggregateMethods: ji.griddensitylim.ds, ji.MinMax.ds
-AssignMethods:
 Depends:
     fields,
     opal,

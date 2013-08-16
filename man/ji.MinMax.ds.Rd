@@ -1,6 +1,6 @@
 \name{ji.MinMax.ds}
 \alias{ji.MinMax.ds}
-\title{Generates a matrix with a minimum and maximum value for xvect and yvect - helper function for heatmap plot}
+\title{Generates a matrix with a minimum and maximum value, for two numerical vector}
 \usage{
   ji.MinMax.ds(xvect, yvect)
 }
@@ -9,8 +9,14 @@
 
   \item{yvect}{a numerical vector}
 }
+\value{
+  a matrix
+}
 \description{
-  Generates a matrix with a minimum and maximum value for
-  xvect and yvect - helper function for heatmap plot
+  This function used by another function to plot a heatmap
+  graph.
+}
+\author{
+  Isaeva, J.
 }
 

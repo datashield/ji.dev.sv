@@ -25,7 +25,13 @@
   \item{numints}{a number of intervals for the grid density
   object, by default is 20}
 }
+\value{
+  a grid density matrix
+}
 \description{
   Generates a density grid with a priori defined limits
+}
+\author{
+  Isaeva, J.
 }
 
