@@ -6,6 +6,7 @@ License: GPL-3
 Title: Grid density object with defined limits (server)
 Description: Grid density object with defined limits (server)
 AggregateMethods: ji.griddensitylim.ds, ji.MinMax.ds
+AssignMethods:
 Collate:
     'ji.griddensitylim.ds.R'
     'ji.MinMax.ds.R'
