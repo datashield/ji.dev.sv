@@ -1,0 +1,11 @@
+Package: testGrid
+Maintainer: <datashield@obiba.org>
+Author: <datashield@obiba.org>
+Version: 1.0
+License: GPL-3
+Title: Grid density object with defined limits (server)
+Description: Grid density object with defined limits (server)
+AggregateMethods: ji.griddensitylim.ds, ji.MinMax.ds
+Collate:
+    'ji.griddensitylim.ds.R'
+    'ji.MinMax.ds.R'
