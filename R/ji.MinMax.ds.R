@@ -9,19 +9,19 @@
 #' 
 ji.MinMax.ds <- function(xvect, yvect) {
   
-  MinMaxMatrix <- matrix(0,nrow=2,ncol=2)
-  MinMaxMatrix <- as.data.frame(MinMaxMatrix)
-  names(MinMaxMatrix) <- c('xvect', 'yvect')
-  row.names(MinMaxMatrix) <- c('min', 'max')
-  MinMaxMatrix['min', 'xvect'] <- min(xvect, na.rm=T)
-  MinMaxMatrix['max', 'xvect'] <- max(xvect, na.rm=T)
-  MinMaxMatrix['min', 'yvect'] <- min(yvect, na.rm=T)
-  MinMaxMatrix['max', 'yvect'] <- max(yvect, na.rm=T)
+  MinMaxMatrix <- data.frame(cbind(c(0,0),c(0,0)))
+  colnames(MinMaxMatrix) <- c("xvect", "yvect")
+  rownames(MinMaxMatrix) <- c("min", "max")
   
-  MinMaxMatrix['min', 'xvect'] <- runif(1, 0.9, 1) * MinMaxMatrix['min', 'xvect']
-  MinMaxMatrix['max', 'xvect'] <- runif(1, 1, 1.1) * MinMaxMatrix['max', 'xvect'] # * runif(1, 1, 1.1)
-  MinMaxMatrix['min', 'yvect'] <- runif(1, 0.9, 1) * MinMaxMatrix['min', 'yvect'] # * runif(1, 1, 1.1)
-  MinMaxMatrix['max', 'yvect'] <- runif(1, 1, 1.1) * MinMaxMatrix['max', 'yvect'] # * runif(1, 1, 1.1)
+  MinMaxMatrix[1, 1] <- min(xvect, na.rm=T)
+  MinMaxMatrix[2, 1] <- max(xvect, na.rm=T)
+  MinMaxMatrix[1, 2] <- min(yvect, na.rm=T)
+  MinMaxMatrix[2, 2] <- max(yvect, na.rm=T)
+  
+  MinMaxMatrix[1, 1] <- runif(1, 0.9, 1) * MinMaxMatrix[1, 1]
+  MinMaxMatrix[2, 1] <- runif(1, 1, 1.1) * MinMaxMatrix[2, 1] 
+  MinMaxMatrix[1, 2] <- runif(1, 0.9, 1) * MinMaxMatrix[1, 2]
+  MinMaxMatrix[2, 2] <- runif(1, 1, 1.1) * MinMaxMatrix[2, 2]
   
   return(MinMaxMatrix)  
 }

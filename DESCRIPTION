@@ -4,12 +4,8 @@ Author: <datashield@obiba.org>
 Version: 1.0
 License: GPL-3
 Title: ji.dev.sv
-Description: ji.dev.sv (sever)
-AggregateMethods: ji.griddensitylim.ds, ji.MinMax.ds
-Depends:
-    fields,
-    opal,
-    opaladmin
+Description: ji.dev.sv (server)
+AggregateMethods: ji.MinMax.ds, ji.griddensitylim.ds
 Collate:
     'ji.griddensitylim.ds.R'
     'ji.MinMax.ds.R'
