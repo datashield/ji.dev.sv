@@ -17,6 +17,6 @@
   graph.
 }
 \author{
-  Isaeva, J.
+  Isaeva, J. and Gaye A.
 }
 
