@@ -32,6 +32,6 @@
   Generates a density grid with a priori defined limits
 }
 \author{
-  Isaeva, J.
+  Isaeva, J. and Gaye, A.
 }
 

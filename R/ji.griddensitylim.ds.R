@@ -8,7 +8,7 @@
 #' @param y.max a maximum value for the y axis of the grid density object
 #' @param numints a number of intervals for the grid density object, by default is 20
 #' @return a grid density matrix
-#' @author Isaeva, J.
+#' @author Isaeva, J. and Gaye, A.
 #' @export
 #' 
 ji.griddensitylim.ds  <-  function(xvect,yvect, x.min, x.max, y.min, y.max, numints=20){
