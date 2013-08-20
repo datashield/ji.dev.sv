@@ -83,9 +83,13 @@ ji.griddensitylim.ds  <-  function(xvect,yvect, x.min, x.max, y.min, y.max, numi
   
   
   if (cell.count>0) {
-    cat('\n Number of invalid cells is \n')
-   print(cell.count)
+    title.text = paste('Number of invalid cells is ',cell.count, sep='')
+#     cat('\n Number of invalid cells is \n')
+#    print(cell.count)
   }
+  
+  names(dimnames(grid.density.obj))[2] = title.text
+  names(dimnames(grid.density.obj))[1] = ''
   
   return(grid.density.obj)
   # grid.density.obj
