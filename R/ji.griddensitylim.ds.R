@@ -82,9 +82,9 @@ ji.griddensitylim.ds  <-  function(xvect,yvect, x.min, x.max, y.min, y.max, numi
   #   else
   
   
-  if (cell.count>0) {
+  # if (cell.count>0) {
     cat('\n Number of invalid cells is \n')
-    print(cell.count)
+  #  print(cell.count)
   }
   
 #   return(grid.density.obj)
