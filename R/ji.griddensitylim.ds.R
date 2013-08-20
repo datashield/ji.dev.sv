@@ -25,21 +25,9 @@ ji.griddensitylim.ds  <-  function(xvect,yvect, x.min, x.max, y.min, y.max, numi
   yvect <- yvect.save[x.and.y.present==1]
   
   
-  
-  #   #par(mfrow=c(1,1))
-  #   y.min <- min(yvect)
-  #   x.min <- min(xvect)
-  #   y.max <- max(yvect)
-  #   x.max <- max(xvect)
-  
-  
-  #   y.range <- max(yvect)-min(yvect)
-  #   x.range <- max(xvect)-min(xvect)
-  
   y.range <- y.max-y.min
   x.range <- x.max-x.min
   
-  #   numints <- 20
   y.interval <- y.range/numints
   x.interval <- x.range/numints
   
@@ -69,28 +57,16 @@ ji.griddensitylim.ds  <-  function(xvect,yvect, x.min, x.max, y.min, y.max, numi
     }
   }
   
-  
-  
-  #   print(length(x.mids))
-  #   print(length(y.mids))
-  
-  #grid.density.obj <- data.frame(matrix(grid.density),as.vector(x.mids),as.vector(y.mids))
+   
   grid.density.obj <- cbind(grid.density,x.mids,y.mids)
   
-  #   if (any(grid.density.obj)<=4)
-  #     warning('Some cells contain less than four values: the table is not displayed')
-  #   else
-  
-  
-  if (cell.count>0) {
+  if (cell.count>0) 
     title.text = paste('Number of invalid cells is ',cell.count, sep='')
-#     cat('\n Number of invalid cells is \n')
-#    print(cell.count)
   }
   
   names(dimnames(grid.density.obj))[2] = title.text
   names(dimnames(grid.density.obj))[1] = ''
   
   return(grid.density.obj)
-  # grid.density.obj
+
 }
