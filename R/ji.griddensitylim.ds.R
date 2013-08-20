@@ -87,5 +87,6 @@ ji.griddensitylim.ds  <-  function(xvect,yvect, x.min, x.max, y.min, y.max, numi
     print(cell.count)
   }
   
-  return(grid.density.obj)
+#   return(grid.density.obj)
+  grid.density.obj
 }
