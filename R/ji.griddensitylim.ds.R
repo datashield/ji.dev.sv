@@ -49,7 +49,7 @@ ji.griddensitylim.ds  <-  function(xvect,yvect, x.min, x.max, y.min, y.max, numi
     {
       grid.density[j,k] <- sum(1*(yvect>=y.cuts[j] & yvect<y.cuts[j+1] & xvect >=x.cuts[k] & xvect<x.cuts[k+1]), na.rm=TRUE)
       
-      if (grid.density[j,k]<=4) {
+      if ( (grid.density[j,k]>0) & (grid.density[j,k]<=4) ) {
         grid.density[j,k]  <-  0
         cell.count  <-  cell.count+1
       }
@@ -60,8 +60,7 @@ ji.griddensitylim.ds  <-  function(xvect,yvect, x.min, x.max, y.min, y.max, numi
    
   grid.density.obj <- cbind(grid.density,x.mids,y.mids)
   
-  if (cell.count>0) 
-    title.text = paste('Number of invalid cells is ',cell.count, sep='')
+  title.text = paste('Number of invalid cells (cells with counts >0 and <5) is ',cell.count, sep='')
   
   names(dimnames(grid.density.obj))[2] = title.text
   names(dimnames(grid.density.obj))[1] = ''
