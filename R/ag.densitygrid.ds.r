@@ -2,12 +2,13 @@
 #' @title Generate a density grid
 #' @param xvect a numerical vector
 #' @param yvect a numerical vector
+#' @param numints a number of intervals for the grid density object, by default is 20
 #' @return a density grid matrix
 #' @author Gaye, A. and Isaeva, J.
 #' @export
 #' 
 
-ag.densitygrid.ds <- function(xvect,yvect)
+ag.densitygrid.ds <- function(xvect,yvect, numints=20)
 {
   xvect.save<-xvect
   yvect.save<-yvect
@@ -21,8 +22,6 @@ ag.densitygrid.ds <- function(xvect,yvect)
   yvect<-yvect.save[x.and.y.present==1]
   
   
-  
-  #par(mfrow=c(1,1))
   y.min<-min(yvect)
   x.min<-min(xvect)
   y.max<-max(yvect)
@@ -32,7 +31,6 @@ ag.densitygrid.ds <- function(xvect,yvect)
   y.range<-max(yvect)-min(yvect)
   x.range<-max(xvect)-min(xvect)
   
-  numints<-20
   y.interval<-y.range/numints
   x.interval<-x.range/numints
   
@@ -46,19 +44,30 @@ ag.densitygrid.ds <- function(xvect,yvect)
   
   
   grid.density<-matrix(0,nrow=numints,ncol=numints)
+  cell.count <- 0
   
   for(j in 1:numints)
   {
     for(k in 1:numints)
     {
       grid.density[j,k]<-sum(1*(yvect>=y.cuts[j] & yvect<y.cuts[j+1] & xvect >=x.cuts[k] & xvect<x.cuts[k+1]), na.rm=TRUE)
+      
+      if ( (grid.density[j,k]>0) & (grid.density[j,k]<=4) ) {
+        grid.density[j,k]  <-  0
+        cell.count  <-  cell.count+1
+      }
+      
     }
   }
-  print(length(x.mids))
-  print(length(y.mids))
+#   print(length(x.mids))
+#   print(length(y.mids))
   
-  #grid.density.obj<-data.frame(base::matrix(grid.density),as.vector(x.mids),as.vector(y.mids))
   grid.density.obj<-base::cbind(grid.density,x.mids,y.mids)
+  
+  title.text = paste('Number of invalid cells (cells with counts >0 and <5) is ',cell.count, sep='')
+  
+  names(dimnames(grid.density.obj))[2] = title.text
+  names(dimnames(grid.density.obj))[1] = ''
   
   return(grid.density.obj)
 }
