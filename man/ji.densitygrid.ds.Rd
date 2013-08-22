@@ -1,8 +1,8 @@
-\name{ag.densitygrid.ds}
-\alias{ag.densitygrid.ds}
+\name{ji.densitygrid.ds}
+\alias{ji.densitygrid.ds}
 \title{Generate a density grid}
 \usage{
-  ag.densitygrid.ds(xvect, yvect, numints = 20)
+  ji.densitygrid.ds(xvect, yvect, numints = 20)
 }
 \arguments{
   \item{xvect}{a numerical vector}
