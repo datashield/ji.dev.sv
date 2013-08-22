@@ -21,11 +21,11 @@ dsadmin.remove_package(opals, 'ji.dev.sv')
 dsadmin.install_package(opals, 'ji.dev.sv', ref='master')
 
 # generate a density grid matrix
-datashield.aggregate(opals, quote(ag.densitygrid.ds(D$LAB_TSC, D$LAB_HDL)))
+datashield.aggregate(opals, quote(ji.densitygridTEST.ds(D$LAB_TSC, D$LAB_HDL)))
+datashield.aggregate(opals, quote(ji.densitygridTEST.ds(D$LAB_TSC, D$LAB_HDL, x.min=3))) # should not work as limits=F
 
 # generate a density grid matrix with defined limits
-datashield.aggregate(opals, quote(ji.densitygridlim.ds(D$LAB_TSC, D$LAB_HDL,x.min=1,x.max=11,y.min=0,y.max=3)))
-datashield.aggregate(opals, quote(ji.densitygridlim.ds(D$LAB_TSC, D$LAB_HDL,x.min=1,x.max=11,y.min=4,y.max=3, numints=15)))
-datashield.aggregate(opals, quote(ji.densitygridlim.ds(D$LAB_TSC, D$LAB_HDL,x.min=1,x.max=11,y.min=0,y.max=3, numints=25)))
-
-
+datashield.aggregate(opals, quote(ji.densitygridTEST.ds(D$LAB_TSC, D$LAB_HDL, limits=T))) # should not work without defined limits
+datashield.aggregate(opals, quote(ji.densitygridTEST.ds(D$LAB_TSC, D$LAB_HDL, limits=T, x.min=1,x.max=11,y.min=0,y.max=3)))
+datashield.aggregate(opals, quote(ji.densitygridTEST.ds(D$LAB_TSC, D$LAB_HDL, limits=T, x.min=1,x.max=11,y.min=0,y.max=3, numints=15)))
+datashield.aggregate(opals, quote(ji.densitygridTEST.ds(D$LAB_TSC, D$LAB_HDL, limits=T, x.min=1,x.max=11,y.min=0,y.max=3, numints=25)))
