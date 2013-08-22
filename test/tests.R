@@ -17,7 +17,7 @@ datashield.assign(server2, 'D', 'CNSIM.CNSIM')
 datashield.assign(server3, 'D', 'CNSIM.CNSIM')
 
 # install respective R package (remove the previous version if needed)
-# dsadmin.remove_package(opals, 'ji.dev.sv')
+dsadmin.remove_package(opals, 'ji.dev.sv')
 dsadmin.install_package(opals, 'ji.dev.sv', ref='master')
 
 # generate a density grid matrix
