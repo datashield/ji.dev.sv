@@ -7,8 +7,8 @@
 #' @author Gaye, A. and Isaeva, J.
 #' @export
 #' 
-ag.densitygrid.ds <- function(xvect,yvect, numints=20)
-{
+ag.densitygrid.ds <- function(xvect,yvect, numints=20){
+  
   xvect.save<-xvect
   yvect.save<-yvect
   
@@ -59,7 +59,7 @@ ag.densitygrid.ds <- function(xvect,yvect, numints=20)
     }
   }
   
-  grid.density.obj<-base::cbind(grid.density,x.mids,y.mids)
+  grid.density.obj<-cbind(grid.density,x.mids,y.mids)
   
   title.text = paste('Number of invalid cells (cells with counts >0 and <5) is ',cell.count, sep='')
   
@@ -67,4 +67,5 @@ ag.densitygrid.ds <- function(xvect,yvect, numints=20)
   names(dimnames(grid.density.obj))[1] = ''
   
   return(grid.density.obj)
+  
 }
