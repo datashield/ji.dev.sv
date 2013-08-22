@@ -7,7 +7,7 @@
 #' @param y.min a minimum value for the y axis of the grid density object
 #' @param y.max a maximum value for the y axis of the grid density object
 #' @param numints a number of intervals for the grid density object, by default is 20
-#' @return a grid density matrix
+#' @return a grid density matrix with defined limits
 #' @author Isaeva, J. and Gaye, A.
 #' @export
 #' 
