@@ -8,5 +8,4 @@ Description: ji.dev.sv (server)
 AggregateMethods: ji.MinMax.ds, ji.griddensitylim.ds, ag.densitygrid.ds
 Collate:
     'ji.MinMax.ds.R'
-    'ag.densitygrid.ds.r'
     'ji.densitygridlim.ds.R'
