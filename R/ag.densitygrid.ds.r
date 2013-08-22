@@ -1,7 +1,7 @@
 #' 
 #' @title Generate a density grid
 #' @param xvect a numerical vector
-#' @param xvect a numerical vector
+#' @param yvect a numerical vector
 #' @return a density grid matrix
 #' @author Gaye, A. and Isaeva, J.
 #' @export

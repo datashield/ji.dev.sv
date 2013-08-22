@@ -3,11 +3,13 @@
 \title{Generate a density grid}
 \usage{
   ag.densitygrid.ds(xvect, yvect)
+
+  ag.densitygrid.ds(xvect, yvect)
 }
 \arguments{
   \item{xvect}{a numerical vector}
 
-  \item{xvect}{a numerical vector}
+  \item{yvect}{a numerical vector}
 }
 \value{
   a density grid matrix
