@@ -7,7 +7,6 @@
 #' @author Gaye, A. and Isaeva, J.
 #' @export
 #' 
-
 ag.densitygrid.ds <- function(xvect,yvect, numints=20)
 {
   xvect.save<-xvect
