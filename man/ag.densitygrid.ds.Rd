@@ -3,8 +3,6 @@
 \title{Generate a density grid}
 \usage{
   ag.densitygrid.ds(xvect, yvect)
-
-  ag.densitygrid.ds(xvect, yvect)
 }
 \arguments{
   \item{xvect}{a numerical vector}
