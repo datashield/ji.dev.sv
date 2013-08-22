@@ -7,6 +7,6 @@ Title: ji.dev.sv
 Description: ji.dev.sv (server)
 AggregateMethods: ji.MinMax.ds, ji.griddensitylim.ds, ag.densitygrid.ds
 Collate:
-    'ji.griddensitylim.ds.R'
     'ji.MinMax.ds.R'
     'ag.densitygrid.ds.r'
+    'ji.densitygridlim.ds.R'
