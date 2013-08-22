@@ -1,0 +1,37 @@
+\name{ji.densitygridlim.ds}
+\alias{ji.densitygridlim.ds}
+\title{Generates a density grid with a priori defined limits}
+\usage{
+  ji.densitygridlim.ds(xvect, yvect, x.min, x.max, y.min,
+    y.max, numints = 20)
+}
+\arguments{
+  \item{xvect}{a numerical vector}
+
+  \item{yvect}{a numerical vector}
+
+  \item{x.min}{a minimum value for the x axis of the grid
+  density object}
+
+  \item{x.max}{a maximum value for the x axis of the grid
+  density object}
+
+  \item{y.min}{a minimum value for the y axis of the grid
+  density object}
+
+  \item{y.max}{a maximum value for the y axis of the grid
+  density object}
+
+  \item{numints}{a number of intervals for the grid density
+  object, by default is 20}
+}
+\value{
+  a grid density matrix with defined limits
+}
+\description{
+  Generates a density grid with a priori defined limits
+}
+\author{
+  Isaeva, J. and Gaye, A.
+}
+
