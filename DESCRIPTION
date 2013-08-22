@@ -9,4 +9,4 @@ AggregateMethods: ji.MinMax.ds, ji.griddensitylim.ds, ag.densitygrid.ds
 Collate:
     'ji.griddensitylim.ds.R'
     'ji.MinMax.ds.R'
-    'ag.densitygrid.ds.R
+    'ag.densitygrid.ds.r'
