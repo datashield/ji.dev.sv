@@ -28,8 +28,8 @@ ag.densitygrid.ds <- function(xvect,yvect, numints=20)
   x.max<-max(xvect)
   
   
-  y.range<-max(yvect)-min(yvect)
-  x.range<-max(xvect)-min(xvect)
+  y.range<-y.max-y.min
+  x.range<-x.max-x.min
   
   y.interval<-y.range/numints
   x.interval<-x.range/numints
@@ -59,8 +59,6 @@ ag.densitygrid.ds <- function(xvect,yvect, numints=20)
       
     }
   }
-#   print(length(x.mids))
-#   print(length(y.mids))
   
   grid.density.obj<-base::cbind(grid.density,x.mids,y.mids)
   
