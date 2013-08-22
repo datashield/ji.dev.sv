@@ -26,7 +26,7 @@
   object, by default is 20}
 }
 \value{
-  a grid density matrix
+  a grid density matrix with defined limits
 }
 \description{
   Generates a density grid with a priori defined limits
