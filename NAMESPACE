@@ -1,3 +1,2 @@
 export(ji.densitygrid.ds)
-export(ji.densitygridlim.ds)
 export(ji.MinMax.ds)
