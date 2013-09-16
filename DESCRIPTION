@@ -5,7 +5,9 @@ Version: 1.0
 License: GPL-3
 Title: ji.dev.sv
 Description: ji.dev.sv (server)
-AggregateMethods: ji.MinMax.ds, ji.densitygrid.ds
+AggregateMethods: ji.MinMax.ds,
+  ji.densitygrid.ds,
+  colMeans=base::colMeans
 Collate:
     'ji.MinMax.ds.R'
     'ji.densitygrid.ds.R'
