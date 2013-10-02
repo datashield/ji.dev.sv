@@ -8,6 +8,7 @@ Description: ji.dev.sv (server)
 AggregateMethods: ji.MinMax.ds,
   ji.densitygrid.ds,
   colMeans=base::colMeans
+AssignMethods: rowSums=base::rowSums
 Collate:
     'ji.MinMax.ds.R'
     'ji.densitygrid.ds.R'
