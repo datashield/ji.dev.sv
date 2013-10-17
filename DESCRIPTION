@@ -9,7 +9,8 @@ AggregateMethods: ji.MinMax.ds,
     ji.densitygrid.ds,
     colMeans=base::colMeans
 AssignMethods: rowSums=base::rowSums,
-    cut=base::cut
+    cut=base::cut,
+    seq=base::seq
 Collate:
     'ji.MinMax.ds.R'
     'ji.densitygrid.ds.R'
