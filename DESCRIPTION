@@ -11,7 +11,7 @@ AggregateMethods: ji.MinMax.ds,
 AssignMethods: rowSums=base::rowSums,
     cut=base::cut,
     seq=base::seq,
-    ji.recodelevels.ds.R
+    ji.recodelevels.ds
 Collate:
     'ji.MinMax.ds.R'
     'ji.densitygrid.ds.R'
