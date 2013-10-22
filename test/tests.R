@@ -29,3 +29,11 @@ datashield.aggregate(opals, quote(ji.densitygrid.ds(D$LAB_TSC, D$LAB_HDL, limits
 datashield.aggregate(opals, quote(ji.densitygrid.ds(D$LAB_TSC, D$LAB_HDL, limits=T, x.min=1,x.max=11,y.min=0,y.max=3)))
 datashield.aggregate(opals, quote(ji.densitygrid.ds(D$LAB_TSC, D$LAB_HDL, limits=T, x.min=1,x.max=11,y.min=0,y.max=3, numints=15)))
 datashield.aggregate(opals, quote(ji.densitygrid.ds(D$LAB_TSC, D$LAB_HDL, limits=T, x.min=1,x.max=11,y.min=0,y.max=3, numints=25)))
+
+
+# generate a categorical variable out of a continuous
+datashield.aggregate(opals, quote(class(D$PM_BMI_CONTINUOUS)))
+datashield.assign(opals, 'bmi_categorical', quote(cut(D$PM_BMI_CONTINUOUS, breaks=c(18,25,30))))
+datashield.assign(opals, 'bmi_categorical', quote(cut(D$PM_BMI_CONTINUOUS, breaks=c(0,18,25,30,60),
+                                                      labels=c('underweight', 'normal', 'overweight', 'obesity'))))
+datashield.aggregate(opals, quote(table1d.ds(bmi_categorical)))
