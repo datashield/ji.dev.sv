@@ -17,7 +17,7 @@
 #' opals <- datashield.login(logins=logindata,assign=TRUE,variables=myvar)
 #' 
 #' # get the range of the variable 'LAB_HDL'
-#' datashield.aggregate(opals, quote(range.ds(D$LAB_HDL)))
+#' datashield.assign(opals, 'bmi_new', quote(ji.recodelevels.ds(D$PM_BMI_CATEGORICAL, newlabels=c('underweight', 'normal', 'overweight'))))
 #' }
 #'
 ji.recodelevels.ds <- function(xvect, newlabels){
@@ -26,16 +26,11 @@ ji.recodelevels.ds <- function(xvect, newlabels){
   if(!(is.factor(xvect)))
     stop("The input vector is not a factor!")
   
-  # check whether the input vector is valid (i.e. respect DataSHIELD conditions)
-  check <- isValid.ds(xvect)
   
-  if (check) {
-    oldlabels = levels(xvect)
-    newlabels = factor(newlabels)
-    xvect_newlabels = newlabels[match(xvect, oldlabels)]
-    return(xvect_newlabels)
-  } else {
-    return(NULL)
-  }
+  oldlabels = levels(xvect)
+  newlabels = factor(newlabels)
+  xvect_newlabels = newlabels[match(xvect, oldlabels)]
+  return(xvect_newlabels)
+  
   
 }
