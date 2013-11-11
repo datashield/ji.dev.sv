@@ -28,7 +28,7 @@ library(opal)
 opals <- datashield.login(logins=logindata,assign=TRUE,variables=myvar)
 
 # get the range of the variable 'LAB_HDL'
-datashield.aggregate(opals, quote(range.ds(D$LAB_HDL)))
+datashield.assign(opals, 'bmi_new', quote(ji.recodelevels.ds(D$PM_BMI_CATEGORICAL, newlabels=c('normal', 'overweight', 'obesity'))))
 }
 }
 \author{
