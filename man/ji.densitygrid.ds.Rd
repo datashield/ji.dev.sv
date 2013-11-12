@@ -40,6 +40,18 @@
   Generates a density grid with or without a priori defined
   limits
 }
+\examples{
+\dontrun{
+# load the file that contains the login details
+library(opal)
+data(logindata)
+
+opals <- datashield.login(logins=logindata,assign=TRUE)
+
+# compute the statistical mean
+datashield.aggregate(opals, quote(ji.densitygrid.ds(D$LAB_TSC, D$LAB_HDL)))
+}
+}
 \author{
   Isaeva, J. and Gaye, A.
 }

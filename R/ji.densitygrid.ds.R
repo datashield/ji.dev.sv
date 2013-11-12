@@ -19,12 +19,11 @@
 #' library(opal)
 #' data(logindata)
 #' 
-#  # login and assign a numeric variable to R
-#  myvar <- list("LAB_TSC")
-#' opals <- datashield.login(logins=logindata,assign=TRUE,variables=myvar)
+#  # login
+#' opals <- datashield.login(logins=logindata,assign=TRUE)
 #' 
 #' # compute the statistical mean
-#' stat.mean <- datashield.aggregate(opals, quote(mean.ds(D$LAB_TSC)))
+#' datashield.aggregate(opals, quote(ji.densitygrid.ds(D$LAB_TSC, D$LAB_HDL)))
 #' }
 #' 
 ji.densitygrid.ds  <-  function(xvect,yvect, limits=FALSE, x.min=NULL, x.max=NULL, y.min=NULL, y.max=NULL, numints=20){
@@ -77,7 +76,7 @@ ji.densitygrid.ds  <-  function(xvect,yvect, limits=FALSE, x.min=NULL, x.max=NUL
   {
     for(k in 1:numints)
     {
-      grid.density[j,k] <- sum(1*(yvect>=y.cuts[j] & yvect<y.cuts[j+1] & xvect >=x.cuts[k] & xvect<x.cuts[k+1]), na.rm=TRUE)
+      grid.density[j,k] <- sum(1*(yvect>=y.cuts[k] & yvect<y.cuts[k+1] & xvect >=x.cuts[j] & xvect<x.cuts[j+1]), na.rm=TRUE)
       
       if ( (grid.density[j,k]>0) & (grid.density[j,k]<=4) ) {
         grid.density[j,k]  <-  0
