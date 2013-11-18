@@ -28,7 +28,7 @@ ji.recodelevels.ds <- function(xvect, newlabels){
   
   
   oldlabels = levels(xvect)
-  newlabels = factor(newlabels)
+  newlabels = factor(newlabels, levels=newlabels)
   xvect_newlabels = newlabels[match(xvect, oldlabels)]
   return(xvect_newlabels)
   
