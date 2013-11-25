@@ -12,7 +12,7 @@ AssignMethods: rowSums=base::rowSums,
     cut=base::cut,
     seq=base::seq,
     ji.recodelevels.ds,
-    ji.changerefgroup.ds.R
+    ji.changerefgroup.ds
 Collate:
     'ji.MinMax.ds.R'
     'ji.densitygrid.ds.R'
