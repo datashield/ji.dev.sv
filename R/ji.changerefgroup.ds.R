@@ -35,6 +35,7 @@ ji.changerefgroup.ds <- function(xvect, ref=NULL){
     xvect_levels[i] = paste0(dummy, "_", xvect_levels[i])
   }
   
+  levels(xvect_reordered) = xvect_levels
   return(xvect_reordered)
   
   
