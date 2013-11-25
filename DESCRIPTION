@@ -16,3 +16,4 @@ Collate:
     'ji.MinMax.ds.R'
     'ji.densitygrid.ds.R'
     'ji.recodelevels.ds.R'
+    'ji.changerefgroup.ds.R'

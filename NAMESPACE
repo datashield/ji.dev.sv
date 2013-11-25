@@ -1,3 +1,4 @@
+export(ji.changerefgroup.ds)
 export(ji.densitygrid.ds)
 export(ji.MinMax.ds)
 export(ji.recodelevels.ds)
