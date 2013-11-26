@@ -2,13 +2,15 @@
 \alias{ji.recodelevels.ds}
 \title{recodes a categorical variable}
 \usage{
-  ji.recodelevels.ds(xvect, newlabels)
+  ji.recodelevels.ds(xvect, newlabels = NULL)
 }
 \arguments{
   \item{xvect}{a factor}
 
   \item{newlabels}{a string vector with new labels for the
-  levels}
+  levels If \code{newlabels} is not specified, the naming
+  of original levels is amended - numbering is added
+  (0_..., 1_..., 2_... etc.)}
 }
 \value{
   a factor vector with new labels for levels
