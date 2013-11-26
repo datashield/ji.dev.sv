@@ -38,8 +38,7 @@ ji.recodelevels.ds <- function(xvect, newlabels=NULL){
     } else
       for (i in 1:length(newlabels)) {
         dummy = as.character(i-1)
-        if (is.null(newlabels))
-          newlabels[i] = paste0(dummy, "_", newlabels[i])
+        newlabels[i] = paste0(dummy, "_", newlabels[i])
       }
     
   } else {
