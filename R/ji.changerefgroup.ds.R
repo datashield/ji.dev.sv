@@ -19,7 +19,12 @@
 #' 
 #' # rename the levels of PM_BMI_CATEGORICAL and make "obesity" as a reference level
 #' datashield.assign(opals, 'bmi_new', quote(ji.recodelevels.ds(D$PM_BMI_CATEGORICAL, newlabels=c('normal', 'overweight', 'obesity'))))
-#' datashield.assign(opals, 'bmi_ob', quote(ji.changerefgroup.ds(bmi_new, ref='obesity')))
+#' datashield.assign(opals, 'bmi_ob', quote(ji.changerefgroup.ds(bmi_new, ref='2_obesity')))
+#' ds.levels(opals, quote(bmi_ob))
+#' 
+#' # or without renaming the levels (group "3" as a reference level)
+#' datashield.assign(opals, 'bmi_ob', quote(ji.changerefgroup.ds(D$PM_BMI_CATEGORICAL, ref='3')))
+#' ds.levels(opals, quote(bmi_ob))
 #' }
 #'
 ji.changerefgroup.ds <- function(xvect, ref=NULL){
