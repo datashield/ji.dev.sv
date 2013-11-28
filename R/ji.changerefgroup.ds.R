@@ -29,7 +29,7 @@ ji.changerefgroup.ds <- function(xvect, ref=NULL){
     stop("The input vector is not a factor!")
   
   xvect_reordered = relevel(xvect, ref)
-  # xvect_levels = levels(xvect_reordered)
+  xvect_levels = levels(xvect_reordered)
   for (i in 1:length(xvect_levels)) {
     dummy = as.character(i-1)
     # xvect_levels[i] = paste0(dummy, "_", xvect_levels[i])
