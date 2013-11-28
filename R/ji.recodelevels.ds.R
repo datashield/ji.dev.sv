@@ -32,7 +32,7 @@ ji.recodelevels.ds <- function(xvect, newlabels=NULL){
   
   if (!is.null(newlabels)) {
     if (length(oldlabels)!=length(newlabels)) {
-      error('The number of new levels provided is not the same as in the original vector!')
+      stop('The number of new levels provided is not the same as in the original vector!')
 #       message('The number of new levels provided is not the same as in the original vector!')
 #       stop(" End of process!\n", call.=FALSE)
     } else
