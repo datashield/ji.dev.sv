@@ -7,12 +7,14 @@ Title: ji.dev.sv
 Description: ji.dev.sv (server)
 AggregateMethods: ji.MinMax.ds,
     ji.densitygrid.ds,
-    colMeans=base::colMeans
+    colMeans=base::colMeans,
+    is.matrix=base::is.matrix
 AssignMethods: rowSums=base::rowSums,
     cut=base::cut,
     seq=base::seq,
     ji.recodelevels.ds,
-    ji.changerefgroup.ds
+    ji.changerefgroup.ds,
+    eval=base::eval
 Collate:
     'ji.MinMax.ds.R'
     'ji.densitygrid.ds.R'
