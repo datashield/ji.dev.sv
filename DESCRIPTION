@@ -8,7 +8,8 @@ Description: ji.dev.sv (server)
 AggregateMethods: ji.MinMax.ds,
     ji.densitygrid.ds,
     colMeans=base::colMeans,
-    is.matrix=base::is.matrix
+    is.matrix=base::is.matrix,
+    ji.var.ds
 AssignMethods: rowSums=base::rowSums,
     cut=base::cut,
     seq=base::seq,
@@ -20,3 +21,4 @@ Collate:
     'ji.densitygrid.ds.R'
     'ji.recodelevels.ds.R'
     'ji.changerefgroup.ds.R'
+    'ji.var.ds.R'
