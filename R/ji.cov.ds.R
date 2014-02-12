@@ -30,7 +30,7 @@ ji.cov.ds <- function (x, y=NULL, method = c('pearson', 'kendall', 'spearman')) 
   #   if(length(xvect) > 0 & length(xvect) < 5){
   #     stop("Operation not allowed: argument contains between 1 and 4 observations only!\n")
   #   }else{
-  result <- cov(x, na.rm=TRUE, method=method) 
+  result <- cov(x, use='pairwise.complete.obs', method=method) 
   #   }
   return(result)
 }
