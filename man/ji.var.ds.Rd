@@ -2,14 +2,17 @@
 \alias{ji.var.ds}
 \title{Computes the variance of a vector or matrix}
 \usage{
-  ji.var.ds(x)
+  ji.var.ds(x, y = NULL)
 }
 \arguments{
   \item{x}{a numeric vector, matrix or data frame.}
+
+  \item{y}{\code{NULL} (default) or a vector, matrix or
+  data frame with compatible dimensions to \code{x}.}
 }
 \value{
-  a single value if \code{x} is a vector and a covariance
-  matrix if \code{x} is a matrix
+  a single value if \code{x} and \code{y} are vectors and a
+  matrix otherwise
 }
 \description{
   Computes the variance of a vector or matrix
@@ -28,7 +31,8 @@ opals <- datashield.login(logins=logindata,assign=TRUE,variables=myvar)
 stat.var <- datashield.aggregate(opals, quote(ji.var.ds(D$LAB_TSC)))
 
 # compute the variance of matrix (LAB_TSC,LAB_TRIG)
-stat.var <- datashield.aggregate(opals, quote(ji.var.ds(cbind(D$LAB_TSC,D$LAB_TRIG)))
+datashield.assign(opals,'dummy', quote(cbind(D$LAB_TSC,D$LAB_TRIG)))
+stat.var <- datashield.aggregate(opals, quote(ji.var.ds(dummy)))
 }
 }
 \author{
