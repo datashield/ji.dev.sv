@@ -34,12 +34,12 @@ data(logindata)
 myvar <- list("LAB_TSC","LAB_TRIG")
 opals <- datashield.login(logins=logindata,assign=TRUE,variables=myvar)
 
-# compute the variance of LAB_TSC
-stat.var <- datashield.aggregate(opals, quote(ji.var.ds(D$LAB_TSC)))
+# compute the covariance of LAB_TSC and LAB_TRIG
+stat.cov <- datashield.aggregate(opals, quote(ji.cov.ds(D$LAB_TSC,D$LAB_TRIG)))
 
-# compute the variance of matrix (LAB_TSC,LAB_TRIG)
-datashield.assign(opals,'dummy', quote(cbind(D$LAB_TSC,D$LAB_TRIG)))
-stat.var <- datashield.aggregate(opals, quote(ji.var.ds(dummy)))
+# compute the covariance matrix of concatenated vectors (LAB_TSC and LAB_TRIG)
+datashield.assign(opals, 'dummy', quote(cbind(D$LAB_TSC,D$LAB_TRIG)))
+stat.cov = datashield.aggregate(opals, quote(ji.cov.ds(dummy)))
 }
 }
 \author{
